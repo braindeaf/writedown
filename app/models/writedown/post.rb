@@ -1,6 +1,7 @@
 module Writedown
   class Post < ActiveRecord::Base
     self.table_name = 'storytime_posts'
+    default_scope -> { where(type: 'Storytime::BlogPost') }
 
     class << self
 
